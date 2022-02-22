@@ -1,0 +1,119 @@
+@use '../util' as *;
+
+.game-container {
+// justify-content: space-around;
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.title-container {
+    padding-top:0;
+    margin-top: 0;
+    text-align: center;
+    width:rem(510);
+    border-bottom: solid 1px #3a3a3c;
+    
+}
+
+.tile-container {
+    width:rem(330);
+    margin-bottom:rem(30);
+position:relative;
+    div{
+        display:flex;
+       
+            }
+        
+            .tile{
+                width: rem(62);
+                height: rem(62);
+                border: 2px solid #3a3a3c;
+                box-sizing: border-box;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+                margin: 2px;
+
+                
+            }
+}
+
+.flip {
+    animation: 0.5s linear flipping;
+}
+@keyframes flipping {
+    0%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform: rotateX(90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+
+.key-container {
+    width:rem(640);
+    display:flex;
+    flex-wrap: wrap;
+   margin-top:0;
+   padding-top: 0;
+
+    button{
+        width: rem(43);
+        height:rem(58);
+        border-radius: 4px;
+        border:none;
+        background-color: hsla(0, 0%, 72%, 0.317);
+        margin:4px;
+        color:white;
+        text-align: center;
+          
+        &:nth-child(11){
+           margin-left: rem(30);
+        }
+       
+        &:nth-child(20),
+        &:nth-child(28){
+            width: rem(68);
+        
+        }
+       
+    }
+}
+
+.message-container {
+    height: rem(20);
+    padding:5px;
+    z-index:10;
+    position:absolute;
+    top:20%;
+    p {
+        background-color: #818384;
+        border-radius: 10px;
+        padding: 10px;
+        margin:0;
+       
+    }
+}
+
+.grey-overlay{
+    background-color: #1a1a1a !important;
+    border:none;
+}
+
+.yellow-overlay{
+    background-color: #b59f3a !important;
+    border:none;
+}
+
+.green-overlay{
+    background-color: #538d4e !important;
+    border:none;
+}
+
+
